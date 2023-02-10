@@ -1,0 +1,32 @@
+{
+  "name" : "glue-job-msil",
+  "description" : "",
+  "role" : "glue-app-msil-GlueJobRole-1JYNKSB1TKC0W",
+  "executionProperty" : {
+    "maxConcurrentRuns" : 2
+  },
+  "command" : {
+    "name" : "glueetl",
+    "scriptLocation" : "s3://cicd-project-demo-1/GlueJobs/sample.py",
+    "pythonVersion" : "3"
+  },
+  "defaultArguments" : {
+    "--job-bookmark-option" : "job-bookmark-enable",
+    "--enable-job-insights" : "false",
+    "--job-language" : "python"
+  },
+  "maxRetries" : 0,
+  "allocatedCapacity" : 10,
+  "timeout" : 2880,
+  "maxCapacity" : 10.0,
+  "glueVersion" : "3.0",
+  "numberOfWorkers" : 10,
+  "workerType" : "G.1X",
+  "executionClass" : "STANDARD",
+  "sourceControlDetails" : {
+    "provider" : "GITHUB",
+    "repository" : "Central",
+    "branch" : "master",
+    "folder" : "glue-job-msil"
+  }
+}
