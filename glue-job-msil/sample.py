@@ -11,7 +11,7 @@ from awsglue.utils import getResolvedOptions
 def transform(spark: SparkSession, df: DataFrame) -> DataFrame:
     """
     Function to extract and transform dataframe columns with date
-    to get day, month and year.
+    to get day, month and year..
 
     Args:
         spark (SparkSession): PySpark session object
